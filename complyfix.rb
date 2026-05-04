@@ -5,21 +5,21 @@
 class Complyfix < Formula
   desc "Compliance automation for infrastructure code — scan, fix, and export evidence."
   homepage "https://complyfix.io"
-  version "0.0.1-rc.1"
+  version "1.0.1"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/complyfix/cli-releases/releases/download/v0.0.1-rc.1/complyfix_0.0.1-rc.1_darwin_amd64.tar.gz"
-      sha256 "bc3610f536c7be1d4a696510845cbfeaeb211713847a836221d64ede43de0cea"
+      url "https://github.com/complyfix/cli-releases/releases/download/v1.0.1/complyfix_1.0.1_darwin_amd64.tar.gz"
+      sha256 "67a226dd6e4f7912c01e55d03977eaa2d99f65ee1cc67642a22adddc8d97f7b5"
 
       define_method(:install) do
         bin.install "complyfix"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/complyfix/cli-releases/releases/download/v0.0.1-rc.1/complyfix_0.0.1-rc.1_darwin_arm64.tar.gz"
-      sha256 "3ec57a0d7672c6b3117750a4461786cba08b10d1e070267a9c0b16cc6bc6c9f7"
+      url "https://github.com/complyfix/cli-releases/releases/download/v1.0.1/complyfix_1.0.1_darwin_arm64.tar.gz"
+      sha256 "78667751008a195bba53de774a3d0c104000e9b9a873939513c75079fbb8cf60"
 
       define_method(:install) do
         bin.install "complyfix"
@@ -29,15 +29,15 @@ class Complyfix < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/complyfix/cli-releases/releases/download/v0.0.1-rc.1/complyfix_0.0.1-rc.1_linux_amd64.tar.gz"
-      sha256 "2b4e6b659cf1d26571e5187800953396994e9a474379425a9993dd4a96d4d8dd"
+      url "https://github.com/complyfix/cli-releases/releases/download/v1.0.1/complyfix_1.0.1_linux_amd64.tar.gz"
+      sha256 "f637fc4a31a873879bb465e7401a55d365596979e4b29cf11f9992548deef080"
       define_method(:install) do
         bin.install "complyfix"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/complyfix/cli-releases/releases/download/v0.0.1-rc.1/complyfix_0.0.1-rc.1_linux_arm64.tar.gz"
-      sha256 "89a4ca6cad8196a2ae74c748b430a917d80326e0e11c4724a4dbbf989044efdc"
+      url "https://github.com/complyfix/cli-releases/releases/download/v1.0.1/complyfix_1.0.1_linux_arm64.tar.gz"
+      sha256 "bed66806eec1d3b21154919e6f700a9255938e6e5b432360672046f25bb65314"
       define_method(:install) do
         bin.install "complyfix"
       end
